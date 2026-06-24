@@ -20,8 +20,8 @@ PASSWORD = '1234'
 
 @app.post('/login/')
 async def login(login:login):
-    if login.userid != 'USERID':
+    if login.userid != USERID:
         return {'message': '사용자 아이디가 다릅니다'}
-    if login.password != 'PASSWORD':
+    if login.password != PASSWORD:
         return {'message': '비밀번호가 다릅니다'}
     return {'message': '로그인 성공'}
